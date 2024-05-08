@@ -1,6 +1,3 @@
-#pseudocode
-
-#user input choice of operation
 def calculator_app():
     while True:
         try:
@@ -12,6 +9,23 @@ def calculator_app():
 
             choice = input("Enter choice(1/2/3/4): ")
 
-# input two numbers from the user
-# perform the chosen operation
-# add "do you want to try again"
+            if choice in ('1', '2', '3', '4'):
+                num1 = float(input("Enter first number: "))
+                num2 = float(input("Enter second number: "))
+
+                if choice == '1':
+                    print(num1, "+", num2, "=", num1 + num2)
+
+                elif choice == '2':
+                    print(num1, "-", num2, "=", num1 - num2)
+
+                elif choice == '3':
+                    print(num1, "*", num2, "=", num1 * num2)
+
+                elif choice == '4':
+                    if num2!= 0:
+                        print(num1, "/", num2, "=", num1 / num2)
+                    else:
+                        print("Error! Division by zero is not allowed.")
+            else:
+                print("Invalid input")
