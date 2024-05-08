@@ -29,3 +29,14 @@ def calculator_app():
                         print("Error! Division by zero is not allowed.")
             else:
                 print("Invalid input")
+
+            try_again = input("Do you want to try again? (yes/no): ")
+            if try_again.lower()!= "yes":
+                print("Thank you!")
+                break
+
+        except ValueError:
+            print("Error! Invalid input. Please enter a number.")
+
+if __name__ == "__main__":
+    calculator_app()
